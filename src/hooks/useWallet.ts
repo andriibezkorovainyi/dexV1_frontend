@@ -9,15 +9,15 @@ export const useWallet = () => {
     const [provider, setProvider] = useState<Provider | null>(null);
     const [signer, setSigner] = useState<Signer | null>(null);
     const web3ModalRef = useRef<Web3Modal>();
+    const [networkError, setNetworkError] = useState(false);
     const {getAmounts} = useFundsContext();
 
     useEffect(() => {
-        const connect = async () => {
-            if (!walletConnected) {
+        if (!walletConnected) {
+            setTimeout(async () => {
                 await connectWallet();
-            }
-        };
-        connect();
+            }, 8000);
+        }
     }, [walletConnected]);
 
     const connectWallet = async () => {
@@ -40,8 +40,10 @@ export const useWallet = () => {
         const {chainId} = await web3Provider.getNetwork();
 
         if (chainId !== toBigInt(11155111)) {
-            window.alert("Wrong network. Please select Sepolia network in the Metamask.");
-            throw new Error("Wrong network");
+            setNetworkError(true);
+            return;
+        } else {
+            setNetworkError(false);
         }
 
         const signer = await web3Provider.getSigner();
@@ -55,6 +57,7 @@ export const useWallet = () => {
     };
 
     return {
+        networkError,
         walletConnected,
         signerAddress,
         signer,

@@ -8,25 +8,15 @@ interface Value {
     signerAddress: string | null;
     walletConnected: boolean;
     connectWallet: () => Promise<void>;
+    networkError: boolean;
 }
 
 export const WalletContext = createContext<Value | undefined>(undefined);
 
 export const WalletContextProvider = ({children}: {children: React.ReactNode}) => {
-    const {
-        signer,
-        provider,
-        signerAddress,
-        walletConnected,
-        connectWallet,
-    } = useWallet();
 
     const value = {
-        signer,
-        provider,
-        signerAddress,
-        walletConnected,
-        connectWallet,
+        ...useWallet(),
     };
 
     return (

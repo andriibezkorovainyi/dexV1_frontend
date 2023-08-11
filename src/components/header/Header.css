@@ -45,3 +45,15 @@
     border-radius: 12px;
     background-color: var(--color-sercondary);
 }
+
+.header-network-error {
+    margin-top: 10px;
+    color: red;
+    padding: 5px;
+    border-radius: 10px;
+    border: red 1px solid;
+    position: absolute;
+    right: 1%;
+    top: 5%;
+    font-size: 12px;
+}

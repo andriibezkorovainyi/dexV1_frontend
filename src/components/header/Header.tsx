@@ -9,6 +9,7 @@ export const Header = () => {
         walletConnected,
         signerAddress,
         connectWallet,
+        networkError,
     } = useWalletContext();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -52,16 +53,21 @@ export const Header = () => {
                 </ul>
 
                 {!walletConnected
-                    ? <button onClick={onConnectWallet} className={"header-connect-button"}>
-                        {isLoading
-                            ? <RotatingLines
-                                strokeColor="white"
-                                strokeWidth="5"
-                                animationDuration="0.75"
-                                width="15"
-                                visible={true}
-                            /> : 'Connect'}
-                      </button>
+                    ? <>
+                        <button onClick={onConnectWallet} className={"header-connect-button"}>
+                            {isLoading
+                                ? <RotatingLines
+                                    strokeColor="white"
+                                    strokeWidth="5"
+                                    animationDuration="0.75"
+                                    width="15"
+                                    visible={true}
+                                /> : 'Connect'}
+                        </button>
+                        {networkError
+                            ? <p className={"header-network-error"}>Please, select Sepolia Network</p>
+                            : null}
+                    </>
                     : (
                         <div className={"header-wallet"}>
                             <p className={"header-wallet-address"}>{signerAddress?.slice(0, 5) + '...' + signerAddress?.slice(-3)}</p>
