@@ -1,0 +1,167 @@
+.swap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+
+    min-height: 80vh;
+    overflow-y: auto;
+}
+
+.swap-container {
+    max-width: 440px;
+    margin: auto;
+    padding: 36px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 28px;
+    box-shadow: var(--shadow-color) 3px 6px 30px 9px;
+    position: relative;
+
+    backdrop-filter: blur(7px);
+}
+
+.swap-items-container-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swap-settings {
+    color: #F3F4F6;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.swap-settings:hover {
+    background-color: #F3F4F6;
+}
+
+.swap-title {
+    font-size: 20px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.swap-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.swap-token {
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-color) 1px 3px 10px 3px;
+    background: transparent;
+}
+
+.swap-token:last-of-type {
+    margin-bottom: 2em;
+}
+
+.swap-token-destination {
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.token-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.token-value {
+    color: var(--text-token-value);
+    display: block;
+    width: max-content;
+    height: 100%;
+    margin-top: 8px;
+
+    background-color: transparent;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    outline: none;
+}
+
+.token-value::placeholder {
+    color: var(--text-token-value);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tokenB-value {
+    color: var(--text-token-value);
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.swap-select {
+    width: max-content;
+
+}
+
+.token-credentials {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 2px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.tokenA-credentials:hover {
+    background-color: #F3F4F6;
+}
+
+.swap-toArrow {
+    width: max-content;
+    margin: 16px auto;
+}
+
+.token-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.token-symbol {
+    color: var(--text-primary);
+}
+
+.swap:hover {
+    border-color: transparent;
+ }
+
+.swap-button {
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 10px;
+    color: var(--text-primary);
+    transition: 0.3s;
+    margin: 0 auto;
+}
+
+.active {
+    background: linear-gradient(360deg, var(--color-primary) 0%, var(--color-sercondary) 100%);
+    color: #FFFFFF;
+}
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

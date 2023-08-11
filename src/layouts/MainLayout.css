@@ -1,0 +1,26 @@
+.fade-in {
+    opacity: 0;
+    transition: 3.5s;
+    /*animation-name: appearence;*/
+    /*animation-direction: normal;*/
+    /*animation-timing-function: ease-in;*/
+    /*animation-duration: 5s;*/
+    /*animation-fill-mode: forwards;*/
+}
+
+.fade-out {
+    opacity: 1;
+}
+
+/*@keyframes appearence {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    50% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 1;*/
+/*        !*backdrop-filter: blur(10px);*!*/
+/*    }*/
+/*}*/

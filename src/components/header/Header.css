@@ -1,0 +1,46 @@
+.header {
+    /*border-bottom: 1px rgba(255, 255, 255, 0.2) solid;*/
+}
+
+
+
+.header-container {
+    height: 56px;
+    padding: 22px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-menu-link {
+    color: var(--text-secondary);
+}
+
+.header-menu-link-active {
+    color: var(--text-primary);
+}
+
+.header-connect-button {
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 10px;
+    background: linear-gradient(360deg, var(--color-primary) 0%, var(--color-sercondary) 100%);
+    color: #FFFFFF;
+}
+
+.header-wallet {
+    padding: 5px;
+    border: 1px solid var(--color-primary);
+    border-radius: 12px;
+    background-color: var(--color-sercondary);
+}

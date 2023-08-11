@@ -1,0 +1,60 @@
+.liquidity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+
+    min-height: 80vh;
+    overflow-y: auto;
+}
+
+.liquidity-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    padding: 36px;
+
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 28px;
+    box-shadow: var(--shadow-color) 3px 6px 30px 9px;
+}
+
+.pairs-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.liquidity-pairs-title {
+    margin-top: 3px;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
+.liquidity-pairs-item {
+    padding: 5px;
+    border-radius: 10px;
+    border: 0.6px solid #E5E7EB;
+}
+
+.actions-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.active {
+    background: linear-gradient(360deg, var(--color-tertiary) 0%, #FFFFFF 100%);
+    color: var(--text-primary);
+}
+
+
+
+

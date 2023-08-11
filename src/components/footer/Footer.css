@@ -1,0 +1,57 @@
+.info {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+
+    padding: 20px;
+    width: 100%;
+
+    /*opacity: 0;*/
+    /*transition: 2s;*/
+    /*animation-name: appearence;*/
+    /*animation-direction: normal;*/
+    /*animation-timing-function: ease-in;*/
+    /*animation-duration: 5s;*/
+    /*animation-fill-mode: forwards;*/
+}
+
+@keyframes appearence {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.info-token-price {
+    display: flex;
+    gap: 5px;
+}
+
+.token-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.token-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-sercondary);
+}
+
+.info-ping {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    /*justify-content: space-between;*/
+}
+
+.ping-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-tertiary);
+    margin-bottom: 3px;
+}
