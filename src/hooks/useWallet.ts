@@ -40,7 +40,7 @@ export const useWallet = () => {
         const {chainId} = await web3Provider.getNetwork();
 
         if (chainId !== toBigInt(11155111)) {
-            window.alert("Wrong network");
+            window.alert("Wrong network. Please select Sepolia network in the Metamask.");
             throw new Error("Wrong network");
         }
 

@@ -1,6 +1,8 @@
 import './Header.css';
 import {Link, NavLink} from "react-router-dom";
 import {useWalletContext} from "../../hooks/useWalletContext";
+import {useState} from "react";
+import {RotatingLines} from "react-loader-spinner";
 
 export const Header = () => {
     const {
@@ -8,6 +10,13 @@ export const Header = () => {
         signerAddress,
         connectWallet,
     } = useWalletContext();
+    const [isLoading, setIsLoading] = useState(false);
+
+    const onConnectWallet = async () => {
+        setIsLoading(true);
+        await connectWallet();
+        setIsLoading(false);
+    };
 
     return (
         <div className={"header"}>
@@ -43,7 +52,16 @@ export const Header = () => {
                 </ul>
 
                 {!walletConnected
-                    ? <button onClick={connectWallet} className={"header-connect-button"}>Connect</button>
+                    ? <button onClick={onConnectWallet} className={"header-connect-button"}>
+                        {isLoading
+                            ? <RotatingLines
+                                strokeColor="white"
+                                strokeWidth="5"
+                                animationDuration="0.75"
+                                width="15"
+                                visible={true}
+                            /> : 'Connect'}
+                      </button>
                     : (
                         <div className={"header-wallet"}>
                             <p className={"header-wallet-address"}>{signerAddress?.slice(0, 5) + '...' + signerAddress?.slice(-3)}</p>

@@ -32,7 +32,8 @@
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
-
+    min-height: 2rem;
+    min-width: 4rem;
     border-radius: 10px;
     background: linear-gradient(360deg, var(--color-primary) 0%, var(--color-sercondary) 100%);
     color: #FFFFFF;
