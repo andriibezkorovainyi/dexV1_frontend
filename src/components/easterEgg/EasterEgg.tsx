@@ -63,8 +63,8 @@ class Particle {
         public readonly easterEggData: EasterEggRenderProps
     ) {
         this.x = Math.random() * canvas.clientWidth;
-        this.y = 0;
-        this.speed = 0;
+        this.y = 1.5;
+        this.speed = 1.5;
         this.velocity = Math.random() * easterEggData.config.initialVelocityCap;
         this.size =
             Math.random() * easterEggData.config.dropSizeCap +
