@@ -8,7 +8,7 @@ export const MainLayout = () => {
     setTimeout(() => {
         const mainLayout = document.getElementsByClassName('fade-in')[0];
         mainLayout.classList.add('fade-out');
-    }, 4000);
+    }, 3000);
 
     return (
         <>
